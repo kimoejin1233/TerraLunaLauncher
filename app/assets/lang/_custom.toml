@@ -1,7 +1,7 @@
 # Custom Language File for Launcher Customizer
 
 [ejs.app]
-title = "TerraLuna Launcher"
+title = "TerraLuna Launcher - ( 1.0.0 베타버전 )"
 
 [ejs.landing]
 mediaLinkURL = "#"

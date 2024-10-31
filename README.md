@@ -8,7 +8,7 @@
 
 [<p align="center"><img src="https://img.shields.io/endpoint?url=https://minecraft-server-status-badge.vercel.app/api/server/mysticred.space?port=25565&logo=curseforge&logoColor=ffffff&label=MRS Server&labelColor=F16436&color=28231d&style=for-the-badge" alt="homepage">](https://mysticred.space) [<img src="https://img.shields.io/discord/330997213255827457?style=for-the-badge&logo=discord&logoColor=ffffff&label=Discord&labelColor=6173f4&color=28231d" alt="discord">](https://discord.gg/Z8j6ahF4MJ)
 
-<p align="center">Java, Forge, 모드 설치 걱정 없이 서버에 접속하세요. MRS 런처 하나로 준비 끝!</p>
+<p align="center">Java, Forge, 모드 설치 걱정 없이 서버에 접속하세요. TerraLuna 런처 하나로 준비 끝!</p>
 
 ![Screenshot 1](https://i.imgur.com/44esaa9.png)
 ![Screenshot 2](https://i.imgur.com/NxUAzlL.png)
@@ -41,7 +41,7 @@
 
 ## 다운로드
 
-[GitHub Releases](https://github.com/peunsu/MRSLauncher/releases)에서 다운로드할 수 있어요.
+[GitHub Releases](https://github.com/kimoejin1233/TerraLunaLauncher/releases)에서 다운로드할 수 있어요.
 
 #### 최신 릴리즈 버전
 
@@ -49,11 +49,11 @@
 
 #### 최신 프리릴리즈 버전
 
-[![](https://img.shields.io/github/v/release/peunsu/MRSLauncher?include_prereleases&style=flat-square&label=pre-release)](https://github.com/peunsu/MRSLauncher/releases)
+[![](https://img.shields.io/github/v/release/peunsu/MRSLauncher?include_prereleases&style=flat-square&label=pre-release)](https://github.com/kimoejin1233/TerraLunaLauncher/releases)
 
 **지원하는 플랫폼**
 
-[Releases](https://github.com/peunsu/MRSLauncher/releases) 탭에서 시스템 OS에 맞는 설치 파일을 선택해서 다운로드하세요.
+[Releases](https://github.com/kimoejin1233/TerraLunaLauncher/releases) 탭에서 시스템 OS에 맞는 설치 파일을 선택해서 다운로드하세요.
 
 | 플랫폼 | 파일 |
 | -------- | ---- |
@@ -95,7 +95,7 @@ ctrl + shift + i
 **레포지토리 클론 및 의존 패키지 설치**
 
 ```console
-> git clone https://github.com/peunsu/MRSLauncher.git
+> git clone https://github.com/kimoejin1233/TerraLunaLauncher.git
 > cd MRSLauncher
 > npm install
 ```
@@ -179,48 +179,6 @@ Electron의 [렌더러 프로세스][rendererprocess]를 디버깅할 수 있어
 
 이 디버그 설정을 사용하는 동안에는 DevTools 창을 열 수 없어요. Chromium은 하나의 디버거만 허용하고 두 번째 디버거를 열면 프로그램 충돌이 발생해요.
 
----
-
-### 제 3자 사용에 대한 주의사항
-
-원작자([dscalzi](https://github.com/dscalzi))와 원본 레포지토리 링크([Helios Launcher](https://github.com/dscalzi/HeliosLauncher))를 표기하여 출처를 명시하면 무료로 사용할 수 있어요.
-
 Microsoft 인증 설정 방법은 [여기](https://github.com/dscalzi/HeliosLauncher/blob/master/docs/MicrosoftAuth.md)를 참고하세요.
 
 ---
-
-## 리소스
-
-* [위키][wiki]
-* [Nebula (Distribution.json 생성)][nebula]
-* [v2 Rewrite Branch (비활성화)][v2branch]
-
-아래 디스코드에서 개발자들과 소통할 수 있어요.
-
-[![discord](https://discordapp.com/api/guilds/211524927831015424/embed.png?style=banner3)][discord]
-
----
-
-## Mystic Red Space
-
-#### 지겨운 플러그인 서버는 이제 그만! 모드팩은 어떠세요?
-
-* 📅 국내 장수 모드팩 서버 & 커뮤니티 (2017년부터 운영, 8년차)
-* 🔧 MRS 런처를 이용한 간편한 모드팩 설치와 서버 접속
-* 📊 주기적인 유저 제안 및 투표로 모드팩을 선정하여 운영
-* 💰 후원금은 모두 서버 호스팅 비용으로 사용되며 후원 내역이 투명하게 공개
-* 📰 마인크래프트 모드 관련 뉴스가 실시간으로 업데이트되고, AI 번역 및 알림 설정 기능 제공
-
-아래 디스코드에서 MRS와 함께하세요.
-
-[![discord](https://discordapp.com/api/guilds/330997213255827457/embed.png?style=banner3)][discord]
-
-[nodejs]: https://nodejs.org/en/ 'Node.js'
-[vscode]: https://code.visualstudio.com/ 'Visual Studio Code'
-[mainprocess]: https://electronjs.org/docs/tutorial/application-architecture#main-and-renderer-processes 'Main Process'
-[rendererprocess]: https://electronjs.org/docs/tutorial/application-architecture#main-and-renderer-processes 'Renderer Process'
-[chromedebugger]: https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome 'Debugger for Chrome'
-[discord]: https://discord.gg/zNWUXdt 'Discord'
-[wiki]: https://github.com/peunsu/MRSLauncher/wiki 'wiki'
-[nebula]: https://github.com/dscalzi/Nebula 'dscalzi/Nebula'
-[v2branch]: https://github.com/dscalzi/HeliosLauncher/tree/ts-refactor 'v2 branch'
