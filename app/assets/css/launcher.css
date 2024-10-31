@@ -104,7 +104,7 @@ body, button {
     -webkit-app-region: drag;
 }
 
-/* Frame logo (windows only). */
+/* 프로그램 제목 설정. */
 #frameTitleDock {
     padding: 0px 10px;
 }
@@ -114,7 +114,7 @@ body, button {
     letter-spacing: 0.5px;
 }
 
-/* Windows frame button dock. */
+/* 프로그램 버튼 설정 */
 #frameButtonDockWin {
     -webkit-app-region: no-drag !important;
     position: relative;
@@ -153,7 +153,7 @@ body, button {
     outline: 0px;
 }
 
-/* Close button is red. */
+/* 닫기 색깔 설정 */
 #frameButton_close:hover,
 #frameButton_close:focus {
     background: rgba(255, 53, 53, 0.61) !important;
@@ -2854,9 +2854,9 @@ input:checked + .toggleSwitchSlider:before {
 * Landing View (Top Styles) | Left Content
 * * */
 
-/* Logo image. */
+/* 로고이미지 설정 */
 #image_seal {
-    height: 70px;
+    height: 140px;
     width: auto;
     position: relative;
     /* border: 2px solid white; */
@@ -3179,37 +3179,37 @@ input:checked + .toggleSwitchSlider:before {
  *                                                                             *
  ******************************************************************************/
 
-/* Style for a general label on the bottom of the landing view. */
+/* 하단 글꼴 설정 */
 .bot_label {
-    font-size: 9px;
+    font-size: 11px;
     letter-spacing: 1px;
     font-weight: bold;
     text-shadow: 0px 0px 0px #bebcbb;
 }
 
-/* Divider used on the bottom of the landing view. */
+/* 하단 칸막이 */
 .bot_divider {
     height: 25px;
     width: 2px;
     background: rgba(107, 105, 105, 0.7);
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 18px;
+    margin-right: 18px;
 }
 
 /* * *
 * Landing View (Bottom Styles) | Left Content
 * * */
 
-/* Maintains maximum width on the status bar. */
+/* 서버 인원 수 너비 */
 #server_status_wrapper {
     display: inline-flex;
-    width: 75px;
+    width: 80px;
 }
 
-/* Span which displays the player count of the selected server. */
+/* 서버 인원 수 폰트 설정 */
 #player_count {
     color: #949494;
-    font-size: 8px;
+    font-size: 14px;
     font-weight: 900;
     text-shadow: 0px 0px 20px #949494;
     margin-left: 10px;
@@ -3222,9 +3222,9 @@ input:checked + .toggleSwitchSlider:before {
     cursor: pointer;
 }
 
-/* Icon which displays the status of the mojang services. */
+/* 모장 서비스 글씨 폰트 설정*/
 #mojang_status_icon {
-    font-size: 30px;
+    font-size: 25px;
     color: #848484;
     margin-left: 15px;
     font-family: 'sans-serif';
@@ -3289,7 +3289,7 @@ input:checked + .toggleSwitchSlider:before {
     background: white;
 }
 
-/* Non essential service title text. */
+/* Non essential 서비스 제목의 폰트 설정 */
 #mojangStatusNETitle {
     font-size: 10px;
     padding: 0px 3px;
@@ -3302,7 +3302,7 @@ input:checked + .toggleSwitchSlider:before {
     display: flex;
 }
 
-/* Displays the name of the mojang service. */
+/* 모장 서비스에 있는 제목들 폰트 수정 */
 .mojangStatusName {
     width: 100%;
     font-size: 10px;
@@ -3370,13 +3370,13 @@ input:checked + .toggleSwitchSlider:before {
     transition: 0.25s ease;
 }
 
-/* Span which contains the news button text. */
+/* 뉴스버튼 크기 설정 */
 #newsButtonText {
     color: white;
     font-weight: 900;
     letter-spacing: 2px;
     text-shadow: 0px 0px 0px #bebcbb;
-    font-size: 11px;
+    font-size: 15px;
     line-height: 30px;
     display: flex;
     transition: 0.25s ease;
@@ -3632,7 +3632,7 @@ input:checked + .toggleSwitchSlider:before {
     height: 75%;
 }
 
-/* Server selection header. */
+/* 서버선택 크기 설정 */
 #serverSelectHeader,
 #accountSelectHeader {
     font-family: 'Pretendard Medium';
@@ -3744,7 +3744,7 @@ input:checked + .toggleSwitchSlider:before {
     margin-top: 5px;
 }
 
-/* Server listing image. */
+/* 서버 목록 이미지 */
 .serverListingImg {
     margin: 0px 10px 0px 5px;
     border: 1px solid #fff;
@@ -3761,15 +3761,15 @@ input:checked + .toggleSwitchSlider:before {
     height: 50px;
 }
 
-/* The name of the server listing. */
+/* 서버이름 크기. */
 .serverListingName {
-    font-size: 14px;
+    font-size: 22px;
     font-weight: bold;
 }
 
-/* Description for the server listing. */
+/* 서버 설명 크기 */
 .serverListingDescription {
-    font-size: 10px;
+    font-size: 13px;
     line-height: 10px;
     font-weight: bold;
     text-align: left;
@@ -3782,9 +3782,9 @@ input:checked + .toggleSwitchSlider:before {
     justify-content: flex-start;
 }
 
-/* The minecraft version of the server listing. */
+/* 마인크래프트 버전의 크기 */
 .serverListingVersion {
-    font-size: 10px;
+    font-size: 15px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -3796,23 +3796,23 @@ input:checked + .toggleSwitchSlider:before {
     padding: 0px 2px;
 }
 
-/* The revision version of the server's manifest. */
+/* 서버 자체 버전 크기 */
 .serverListingRevision {
     color: #969696;
-    font-size: 10px;
+    font-size: 13px;
     line-height: 12px;
     padding: 0px 5px;
 }
 
-/* Star which indicates the default (main) server. */
+/* 메인 서버를 나타내는 별 표시 설정 */
 .serverListingStarWrapper {
     display: flex;
     align-items: center;
     cursor: pointer;
-    height: 12px;
+    height: 14px;
     position: relative;
 }
-/* Tooltip which displays when hovering over the star. */
+/* 툴팁위에 마우스를 올릴시 뜨는 문구 */
 .serverListingStarTooltip {
     visibility: hidden;
     opacity: 0;
@@ -3823,7 +3823,7 @@ input:checked + .toggleSwitchSlider:before {
     position: absolute;
     z-index: 1;
     left: 130%;
-    font-size: 10px;
+    font-size: 12px;
     transition: visibility 0s linear 0.25s, opacity 0.25s ease;
 }
 .serverListingStarTooltip::after {
@@ -3852,13 +3852,14 @@ input:checked + .toggleSwitchSlider:before {
     margin-top: 25px;
 }
 
-/* Server selection confirm button styles. */
+/* 서버 확인 버튼 스타일 */
 #serverSelectConfirm,
 #accountSelectConfirm {
     background: none;
-    border: 1px solid #ffffff;
+    border: 2px solid #ffffff;
     color: white;
     font-family: 'Pretendard Medium';
+    font-size: 15px;
     font-weight: bold;
     border-radius: 2px;
     padding: 0px 8.1px;
@@ -3879,11 +3880,11 @@ input:checked + .toggleSwitchSlider:before {
     color: rgba(255, 255, 255, 0.75);
 }
 
-/* Server selection cancel button styles. */
+/* 서버 취소 버튼 스타일 */
 #serverSelectCancel,
 #accountSelectCancel {
     font-weight: bold;
-    font-size: 10px;
+    font-size: 15px;
     text-decoration: none;
     padding-top: 2.5px;
     color: rgba(202, 202, 202, 0.75);
@@ -3962,7 +3963,22 @@ input:checked + .toggleSwitchSlider:before {
     }
 }
 
-/* Class which is applied when the spinner image is spinning. */
-.rotating {
-    animation: rotating 10s linear infinite;
+#loadSpinnerImage1 {
+    width: 280px;
+    height: auto;
+    z-index: 400;
+    transform-style: preserve-3d;
+    animation: rotateCard 2s ease-out forwards;
+}
+
+@keyframes rotateCard {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg); /* 로고의 뒤쪽까지 회전 */
+    }
+    100% {
+        transform: rotateY(360deg); /* 정면으로 돌아오기 */
+    }
 }
