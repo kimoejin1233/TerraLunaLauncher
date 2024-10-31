@@ -57,10 +57,10 @@
 
 | 플랫폼 | 파일 |
 | -------- | ---- |
-| Windows x64 | `MRS-Launcher-setup-VERSION.exe` |
-| macOS x64[^1] | `MRS-Launcher-setup-VERSION-x64.dmg` |
-| macOS arm64[^1] | `MRS-Launcher-setup-VERSION-arm64.dmg` |
-| Linux x64 | `MRS-Launcher-setup-VERSION.AppImage` |
+| Windows x64 | `TerraLuna-Launcher-Launcher-setup-VERSION.exe` |
+| macOS x64[^1] | `TerraLuna-Launcher-setup-VERSION-x64.dmg` |
+| macOS arm64[^1] | `TerraLuna-Launcher-setup-VERSION-arm64.dmg` |
+| Linux x64 | `TerraLuna-Launcher-setup-VERSION.AppImage` |
 [^1]: macOS 설치 파일은 서명되지 않아서 보안 경고가 뜰 수 있으며 정상 작동을 보장하지 않아요.
 
 ## 콘솔
