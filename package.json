@@ -1,13 +1,13 @@
 {
-  "name": "mrslauncher",
+  "name": "terraluna_launcher",
   "version": "3.0.3",
-  "productName": "MRS Launcher",
+  "productName": "TerraLuna Launcher",
   "description": "Modded Minecraft Launcher",
   "author": "Daniel Scalzi (https://github.com/dscalzi/), peunsu (https://github.com/peunsu)",
   "license": "UNLICENSED",
-  "homepage": "https://github.com/peunsu/MRSLauncher",
+  "homepage": "https://github.com/kimoejin1233/TerraLunaLauncher",
   "bugs": {
-    "url": "https://github.com/peunsu/MRSLauncher/issues"
+    "url": "https://github.com/kimoejin1233/TerraLunaLauncher/issues"
   },
   "private": true,
   "main": "index.js",
@@ -46,6 +46,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/peunsu/MRSLauncher.git"
+    "url": "git+https://github.com/kimoejin1233/TerraLunaLauncher.git"
   }
 }
