@@ -3203,7 +3203,7 @@ input:checked + .toggleSwitchSlider:before {
 /* 서버 인원 수 너비 */
 #server_status_wrapper {
     display: inline-flex;
-    width: 80px;
+    width: 100px;
 }
 
 /* 서버 인원 수 폰트 설정 */
