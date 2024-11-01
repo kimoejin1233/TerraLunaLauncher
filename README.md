@@ -4,14 +4,7 @@
 
 <h3 align="center"><a href="https://github.com/dscalzi/HeliosLauncher">Forked from Helios Launcher</a></h3>
 
-<p align="center"><a href="https://github.com/peunsu/MRSLauncher/actions"><img src="https://img.shields.io/github/actions/workflow/status/peunsu/MRSLauncher/build.yml?branch=master&style=for-the-badge" alt="gh actions"></a> <a href="https://github.com/peunsu/MRSLauncher/releases"><img src="https://img.shields.io/github/downloads/peunsu/MRSLauncher/total.svg?style=for-the-badge" alt="downloads"></a>
-
-[<p align="center"><img src="https://img.shields.io/endpoint?url=https://minecraft-server-status-badge.vercel.app/api/server/mysticred.space?port=25565&logo=curseforge&logoColor=ffffff&label=MRS Server&labelColor=F16436&color=28231d&style=for-the-badge" alt="homepage">](현제지제공) [<img src="https://img.shields.io/discord/330997213255827457?style=for-the-badge&logo=discord&logoColor=ffffff&label=Discord&labelColor=6173f4&color=28231d" alt="discord">](현제지제공)
-
 <p align="center">TerraLuna Launcher 런처를 이용해 Java, Forge, 모드 설치 걱정 없이 서버에 접속하세요.</p>
-
-![Screenshot 1](#)
-![Screenshot 2](#)
 
 ## 기능
 
@@ -57,10 +50,7 @@
 
 | 플랫폼 | 파일 |
 | -------- | ---- |
-| Windows x64 | `TerraLuna-Launcher-Launcher-setup-VERSION.exe` |
-| macOS x64[^1] | `TerraLuna-Launcher-setup-VERSION-x64.dmg` |
-| macOS arm64[^1] | `TerraLuna-Launcher-setup-VERSION-arm64.dmg` |
-| Linux x64 | `TerraLuna-Launcher-setup-VERSION.AppImage` |
+| Windows x64 | `TerraLuna-Launcher-setup-VERSION.exe` |
 [^1]: macOS 설치 파일은 서명되지 않아서 보안 경고가 뜰 수 있으며 정상 작동을 보장하지 않아요.
 
 ## 콘솔
