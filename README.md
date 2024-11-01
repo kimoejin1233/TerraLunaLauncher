@@ -20,7 +20,7 @@
   * 런처를 실행하기 위해 Java를 설치할 필요가 없어요.
 * 📰 런처에 내장된 뉴스 피드
 * ⚙️ Java 설정이 가능한 직관적인 설정 화면
-* MRS 서버에 쉽게 접속할 수 있어요.
+* TerraLuna 서버에 쉽게 접속할 수 있어요.
   * 모드팩이 여러 개 설치되어 있어도 쉽게 전환할 수 있어요.
   * 서버에 접속한 플레이어 수를 확인할 수 있어요.
 * 런처는 자동으로 업데이트돼요.
@@ -35,14 +35,6 @@
 ## 다운로드
 
 [GitHub Releases](https://github.com/kimoejin1233/TerraLunaLauncher/releases)에서 다운로드할 수 있어요.
-
-#### 최신 릴리즈 버전
-
-[![](https://img.shields.io/github/v/release/peunsu/MRSLauncher?style=flat-square)](https://github.com/peunsu/MRSLauncher/releases/latest)
-
-#### 최신 프리릴리즈 버전
-
-[![](https://img.shields.io/github/v/release/peunsu/MRSLauncher?include_prereleases&style=flat-square&label=pre-release)](https://github.com/kimoejin1233/TerraLunaLauncher/releases)
 
 **지원하는 플랫폼**
 
