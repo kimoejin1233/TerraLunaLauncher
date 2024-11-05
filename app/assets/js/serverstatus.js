@@ -8,7 +8,7 @@ import { connect } from 'net';
  * @returns {Promise.<Object>} A promise which resolves to an object containing
  * status information.
  */
-export function getStatus(address = '118.220.140.108', port = 25565) {
+export function getStatus(address, port = 25565) {
     // Ensure port is a number
     port = typeof port === 'string' ? parseInt(port, 10) : port;
 
