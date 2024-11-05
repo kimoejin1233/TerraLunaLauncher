@@ -277,7 +277,7 @@ downloadingButton = "다운로드 중.."
 downloadButton = 'GitHub에서 다운로드<span style="font-size: 10px;color: gray;text-shadow: none !important;">런처를 종료하고 dmg 파일을 실행하여 업데이트하세요.</span>'
 latestVersionTitle = "최신 버전을 사용하고 있습니다"
 checkForUpdatesButton = "업데이트 확인"
-checkingForUpdatesButton = "업데이트 확인 중.."
+checkingForUpdatesButton = "업데이트는 디스코드 서버에서 해주시길 바랍니다."
 
 [js.settings.msftLogin]
 errorTitle = "Microsoft 로그인 실패"
@@ -297,7 +297,7 @@ loginButton = "로그인"
 selectAnotherAccountButton = "다른 계정 선택"
 
 [js.uicore.autoUpdate]
-checkingForUpdateButton = "업데이트 확인 중..."
+checkingForUpdateButton = "업데이트는 디스코드 서버에서 해주시길 바랍니다."
 installNowButton = "설치하기"
 checkForUpdatesButton = "업데이트 확인"
 
