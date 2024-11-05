@@ -48,9 +48,10 @@ if(!isDev){
             case 'update-available':
                 loggerAutoUpdater.info('New update available', info.version)
                 
-                if(process.platform === 'darwin'){
-                    info.darwindownload = `https://github.com/kimoejin1233/TerraLunaLauncher/releases/download/v${info.version}/TerraLuna-Launcher-setup-${info.version}.exe`
-                    showUpdateUI(info)
+                if (process.platform === 'darwin') {
+                    info.darwindownload = `https://github.com/kimoejin1233/TerraLunaLauncher/releases/download/v${info.version}/TerraLuna-Launcher-setup-${info.version}.dmg`;
+                } else {
+                    info.darwindownload = `https://github.com/kimoejin1233/TerraLunaLauncher/releases/download/v${info.version}/TerraLuna-Launcher-setup-${info.version}.exe`;
                 }
                 
                 populateSettingsUpdateInformation(info)
