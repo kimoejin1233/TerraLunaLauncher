@@ -18,7 +18,7 @@ export function getStatus(address = '118.220.140.108', port = 25565) {
             socket.write(buff);
         });
 
-        socket.setTimeout(2500, () => {
+        socket.setTimeout(25000, () => {
             socket.end();
             reject({ code: 'ETIMEDOUT', errno: 'ETIMEDOUT', address, port });
         });

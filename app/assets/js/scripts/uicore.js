@@ -49,7 +49,7 @@ if(!isDev){
                 loggerAutoUpdater.info('New update available', info.version)
                 
                 if(process.platform === 'darwin'){
-                    info.darwindownload = `https://github.com/kimoejin1233/TerraLunaLauncher/releases/download/v${info.version}/TerraLuna-Launcher-setup-${info.version}${process.arch === 'arm64' ? '-arm64' : '-x64'}.dmg`
+                    info.darwindownload = `https://github.com/kimoejin1233/TerraLunaLauncher/releases/download/v${info.version}/TerraLuna-Launcher-setup-${info.version}${process.arch === 'arm64' ? '-arm64' : '-x64'}.exe`
                     showUpdateUI(info)
                 }
                 
