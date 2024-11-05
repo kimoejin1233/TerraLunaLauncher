@@ -236,34 +236,40 @@ const refreshMojangStatuses = async function(){
 }
 
 const refreshServerStatus = async (fade = false) => {
-    loggerLanding.info('Refreshing Server Status')
-    const serv = (await DistroAPI.getDistribution()).getServerById(ConfigManager.getSelectedServer())
+    loggerLanding.info('Refreshing Server Status') // 서버 상태를 새로 고침 시작을 로그에 기록
+    const serv = (await DistroAPI.getDistribution()).getServerById(ConfigManager.getSelectedServer()) // 현재 선택된 서버의 정보를 가져옴
 
-    let pLabel = Lang.queryJS('landing.serverStatus.server')
-    let pVal = Lang.queryJS('landing.serverStatus.offline')
+    let pLabel = Lang.queryJS('landing.serverStatus.server') // 플레이어 수에 대한 라벨 초기화
+    let pVal = Lang.queryJS('landing.serverStatus.offline') // 초기 플레이어 수 값은 '오프라인'으로 설정
 
     try {
-
+        // 서버 상태를 비동기로 가져옴
         const servStat = await getServerStatus(47, serv.hostname, serv.port)
-        console.log(servStat)
+        console.log(servStat) // 서버 상태 정보를 콘솔에 출력
+
+        // 서버에서 플레이어 수를 가져와서 라벨과 값 업데이트
         pLabel = Lang.queryJS('landing.serverStatus.players')
-        pVal = servStat.players.online + '/' + servStat.players.max
+        pVal = servStat.players.online + '/' + servStat.players.max // 온라인 플레이어 수와 최대 플레이어 수를 표시
 
     } catch (err) {
-        loggerLanding.warn('Unable to refresh server status, assuming offline.')
-        loggerLanding.debug(err)
-    }
-    if(fade){
-        $('#server_status_wrapper').fadeOut(250, () => {
-            document.getElementById('landingPlayerLabel').innerHTML = pLabel
-            document.getElementById('player_count').innerHTML = pVal
-            $('#server_status_wrapper').fadeIn(500)
-        })
-    } else {
-        document.getElementById('landingPlayerLabel').innerHTML = pLabel
-        document.getElementById('player_count').innerHTML = pVal
+        // 서버 상태 조회에 실패할 경우 예외 처리
+        loggerLanding.warn('Unable to refresh server status, assuming offline.') // 경고 로그 기록
+        loggerLanding.debug(err) // 에러 상세 로그 기록
     }
     
+    // UI 업데이트
+    if(fade){
+        // fade가 true인 경우 부드러운 페이드 아웃 효과 후 UI 업데이트
+        $('#server_status_wrapper').fadeOut(250, () => {
+            document.getElementById('landingPlayerLabel').innerHTML = pLabel // 플레이어 라벨 업데이트
+            document.getElementById('player_count').innerHTML = pVal // 플레이어 수 업데이트
+            $('#server_status_wrapper').fadeIn(500) // 다시 부드럽게 페이드 인
+        })
+    } else {
+        // fade가 false인 경우 바로 UI 업데이트
+        document.getElementById('landingPlayerLabel').innerHTML = pLabel // 플레이어 라벨 업데이트
+        document.getElementById('player_count').innerHTML = pVal // 플레이어 수 업데이트
+    }
 }
 
 refreshMojangStatuses()
