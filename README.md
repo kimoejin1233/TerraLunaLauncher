@@ -43,7 +43,7 @@
 | 플랫폼 | 파일 |
 | -------- | ---- |
 | Windows x64 | `TerraLuna-Launcher-setup-VERSION.exe` |
-[^1]: macOS 설치 파일은 서명되지 않아서 보안 경고가 뜰 수 있으며 정상 작동을 보장하지 않아요.
+[^1]: macOS는 현재오류로 지원하지 않습니다. 윈도우로 사용해 주시길 바랍니다.
 
 ## 콘솔
 
@@ -164,3 +164,5 @@ Electron의 [렌더러 프로세스][rendererprocess]를 디버깅할 수 있어
 Microsoft 인증 설정 방법은 [여기](https://github.com/dscalzi/HeliosLauncher/blob/master/docs/MicrosoftAuth.md)를 참고하세요.
 
 ---
+
+#### [원작자(dscalzi)](https://github.com/dscalzi) || [원본 레포지토리(HeliosLauncher)](https://github.com/dscalzi/HeliosLauncher)
