@@ -959,74 +959,88 @@ function displayArticle(articleObject, index){
 }
 
 /**
- * Load news information from the RSS feed specified in the
- * distribution index.
+뉴스 관련 호출 수정 (원작자코드가 오류?가 있는거같음)
  */
-async function loadNews(){
-    setInterval(loadNews, 30*1000); // 뉴스 주기 설정
-    const distroData = await DistroAPI.getDistribution()
-    if(!distroData.rawDistribution.rss) {
-        loggerLanding.debug('No RSS feed provided.')
-        return null
+let isRequestInProgress = false; // 요청이 진행 중인지 확인하는 변수
+
+async function loadNews() {
+    if (isRequestInProgress) {
+        console.log('요청이 진행 중입니다. 잠시 후 다시 시도해주세요.');
+        return null; // 요청이 진행 중이면 새로운 요청을 하지 않음
     }
 
-    const promise = new Promise((resolve, reject) => {
-        
-        const newsFeed = distroData.rawDistribution.rss
-        const newsHost = new URL(newsFeed).origin + '/'
-        $.ajax({
+    isRequestInProgress = true; // 요청 시작
+
+    try {
+        const distroData = await DistroAPI.getDistribution();
+
+        if (!distroData.rawDistribution.rss) {
+            loggerLanding.debug('No RSS feed provided.');
+            isRequestInProgress = false; // 요청 완료
+            return null;
+        }
+
+        const newsFeed = distroData.rawDistribution.rss;
+        const newsHost = new URL(newsFeed).origin + '/';
+
+        // 데이터 요청
+        const data = await $.ajax({
             url: newsFeed,
-            success: (data) => {
-                const items = $(data).find('item')
-                const articles = []
-
-                for(let i=0; i<items.length; i++){
-                // JQuery Element
-                    const el = $(items[i])
-
-                    // Resolve date.
-                    const date = new Date(el.find('pubDate').text()).toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric'})
-
-                    // Resolve comments.
-                    let comments = el.find('slash\\:comments').text() || '0'
-                    comments = comments + ' Comment' + (comments === '1' ? '' : 's')
-
-                    // Fix relative links in content.
-                    let content = el.find('content\\:encoded').text()
-                    let regex = /src="(?!http:\/\/|https:\/\/)(.+?)"/g
-                    let matches
-                    while((matches = regex.exec(content))){
-                        content = content.replace(`"${matches[1]}"`, `"${newsHost + matches[1]}"`)
-                    }
-
-                    let link   = el.find('link').text()
-                    let title  = el.find('title').text()
-                    let author = el.find('author').text()
-
-                    // Generate article.
-                    articles.push(
-                        {
-                            link,
-                            title,
-                            date,
-                            author,
-                            content,
-                            comments,
-                            commentsLink: link + '#comments'
-                        }
-                    )
-                }
-                resolve({
-                    articles
-                })
-            },
             timeout: 2500
-        }).catch(err => {
-            resolve({
-                articles: null
-            })
-        })
-    })
+        });
 
-    return await promise
+        const items = $(data).find('item');
+        const articles = [];
+
+        // RSS 아이템을 처리
+        for (let i = 0; i < items.length; i++) {
+            const el = $(items[i]);
+
+            const date = new Date(el.find('pubDate').text()).toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric'
+            });
+
+            let comments = el.find('slash\\:comments').text() || '0';
+            comments = comments + ' Comment' + (comments === '1' ? '' : 's');
+
+            let content = el.find('content\\:encoded').text() || el.find('description').text();
+
+            let regex = /src="(?!http:\/\/|https:\/\/)(.+?)"/g;
+            let matches;
+            while ((matches = regex.exec(content))) {
+                content = content.replace(`"${matches[1]}"`, `"${newsHost + matches[1]}"`);
+            }
+
+            const link = el.find('link').text();
+            const title = el.find('title').text();
+            const author = el.find('author').text();
+
+            articles.push({
+                link,
+                title,
+                date,
+                author,
+                content,
+                comments,
+                commentsLink: link + '#comments'
+            });
+        }
+
+        isRequestInProgress = false; // 요청 완료
+        return { articles }; // 처리된 데이터를 반환
+
+    } catch (err) {
+        console.error('Error loading news:', err);
+        isRequestInProgress = false; // 에러가 발생했을 때도 요청 완료 처리
+        return { articles: null }; // 에러 발생 시 null 반환
+    }
 }
+
+// 30초마다 뉴스를 호출하는 예시 (요청 중복 방지)
+setInterval(() => {
+    loadNews();
+}, 30000);

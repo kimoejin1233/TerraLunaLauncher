@@ -2589,7 +2589,7 @@ input:checked + .toggleSwitchSlider:before {
     max-width: 90%;
 }
 
-/* News article title styles. */
+/* 뉴스 제목 */
 #newsArticleTitle {
     font-size: 18px;
     font-weight: bold;
@@ -2622,17 +2622,17 @@ input:checked + .toggleSwitchSlider:before {
     justify-content: flex-end;
 }
 
-/* Date and author shared styles. */
+/*작성자 설정 */
 #newsArticleDate,
 #newsArticleAuthor {
     display: inline-block;
-    font-size: 10px;
+    font-size: 13px;
     padding: 0px 5px;
     font-weight: bold;
     border-radius: 2px;
 }
 
-/* Date styles. */
+/* 뉴스 날짜 설정 */
 #newsArticleDate {
     background: white;
     color: black;
@@ -2644,11 +2644,11 @@ input:checked + .toggleSwitchSlider:before {
     background: #a02d2a;
 }
 
-/* News article comments styles. */
+/* 코멘트 스타일 */
 #newsArticleComments {
     margin-top: 5px;
     display: inline-block;
-    font-size: 10px;
+    font-size: 12px;
     color: #ffffff;
     text-decoration: none;
     transition: 0.25s ease;
@@ -2735,12 +2735,12 @@ input:checked + .toggleSwitchSlider:before {
 #newsArticleContentWrapper {
     width: 80%;
 }
-
+/*뉴스 위 스타일*/
 .newsArticleSpacerTop {
     height: 15px;
 }
 
-/* Div to add spacing at the end of a news article. */
+/* 뉴스 아래 스타일*/
 .newsArticleSpacerBot {
     height: 30px;
 }
