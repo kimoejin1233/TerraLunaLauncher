@@ -278,7 +278,7 @@ refreshMojangStatuses()
 // Refresh statuses every hour. The status page itself refreshes every day so...
 let mojangStatusListener = setInterval(() => refreshMojangStatuses(true), 60*60*1000)
 // Set refresh rate to once every 5 minutes.
-let serverStatusListener = setInterval(() => refreshServerStatus(true), 300000)
+let serverStatusListener = setInterval(() => refreshServerStatus(true), 15000) //서버 주기업데이트 15초
 
 /**
  * Shows an error overlay, toggles off the launch area.
@@ -963,7 +963,7 @@ function displayArticle(articleObject, index){
  * distribution index.
  */
 async function loadNews(){
-
+    setInterval(loadNews, 30*1000); // 뉴스 주기 설정
     const distroData = await DistroAPI.getDistribution()
     if(!distroData.rawDistribution.rss) {
         loggerLanding.debug('No RSS feed provided.')
